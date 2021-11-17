@@ -11,12 +11,21 @@
 
     <div class="form-field">
       <label class="form-field__label" for="valor">Valor</label>
-      <input class="form-field__input" id="valor" type="text">
+      <input class="form-field__input" id="valor" type="text" [(ngModel)]="valor" name="valor"/>
+      <!-- ao se colocar name="valor" está se dizendo que ele faz parte desse formulário e
+        quero que todas as regras de validações sejam válidas para ele também. É isso que vamos fazer.  -->
     </div>
+
+    <!-- O two-way databinding - [(ngModel)] -
+      garante que o valor seja transmitido tanto do componente para o template,
+      quanto do template para o componente.  -->
+
+    <!-- property binding - [ngModel]-
+    pega especificamente o valor do componente e traz para o template.-->
 
     <div class="form-field">
       <label class="form-field__label" for="destino">Destino</label>
-      <input class="form-field__input" id="destino" type="text">
+      <input class="form-field__input" id="destino" type="text" [(ngModel)]="destino" name="valor"/>
     </div>
 
     <div class="botao-wrapper">
@@ -26,7 +35,7 @@
     </div>
 
     <div>
-      
+
     </div>
 
   </form>
